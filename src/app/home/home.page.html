@@ -1,0 +1,100 @@
+
+<ion-content class="ion-padding">
+  <div class="header">
+    <ion-title color="medidor">
+      Medidor Diário
+    </ion-title>
+    <div class="configuracoes">
+      <ion-button routerLink="/settings" color="light" fill="clear" mode="md">
+        <ion-icon color="primary" name="flash">
+        </ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <ion-segment [(ngModel)]="medidorOpcao" mode="md">
+    <ion-segment-button value="ciclometrico">
+      <ion-label>
+        Ciclométrico
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="digital">
+      <ion-label>
+        Digital
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="ponteiros">
+      <ion-label>
+        Ponteiros
+      </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div (click)="tipoModelo(medidorOpcao)" style="text-align: center;
+    margin-bottom: 15px;">
+    <ion-label>
+      Saiba sobre esse medidor aqui
+      <ion-icon name="information-circle" color="primary"></ion-icon>
+    </ion-label>
+    <div *ngIf="medidorOpcao === 'ponteiros'" class="container-tipo">
+      <img src="assets/icon/ponteiros.svg" />
+      <img src="assets/icon/ponteiros.svg" />
+      <img src="assets/icon/ponteiros.svg" />
+      <img src="assets/icon/ponteiros.svg" />
+    </div>
+    <div *ngIf="medidorOpcao === 'ciclometrico'" class="container-tipo">
+      <img src="assets/icon/ciclometricos.svg" />
+    </div>
+    <div *ngIf="medidorOpcao === 'digital'" class="container-tipo">
+      <img src="assets/icon/digital.svg" />
+    </div>
+
+  </div>
+
+  <div class="valor-consumo">
+    <h2>
+      {{leituraDeConsumo}} kW
+    </h2>
+    <ion-label>
+      Consumo diário
+      <ion-icon name="flash" color="primary"></ion-icon>
+    </ion-label>
+  </div>
+
+  <div class="containers">
+    <div class="container-list">
+      <ion-label class="label-campo">
+        Leitura atual do medidor
+      </ion-label>
+      <div class="container-leitura">
+        <ion-input max="4" [(ngModel)]="leituraAtual" maxlength="4" type="tel">
+        </ion-input>
+      </div>
+    </div>
+
+    <div class="container-list">
+      <ion-label class="label-campo">
+        Leitura do dia anterior
+      </ion-label>
+      <div class="container-leitura">
+        <ion-input [(ngModel)]="leituraAnterior" maxlength="4" type="tel">
+        </ion-input>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer mode="md" class="ion-no-border">
+  <ion-toolbar class="footol">
+    <ion-button (click)="calcularLeitura()" [disabled]="button" class="calcular"
+      mode="ios" expand="block">
+      <ion-label>
+        Calcular Medida
+      </ion-label>
+      <div style="margin-left: 10px;" *ngIf="button">
+        <ion-spinner color="light" name="crescent"></ion-spinner>
+      </div>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

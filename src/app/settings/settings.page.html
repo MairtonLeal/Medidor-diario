@@ -1,0 +1,70 @@
+
+
+<ion-content class="ion-padding">
+  <div class="header">
+    <div class="configuracoes">
+      <ion-button fill="clear" routerLink="/home" routerDirection="back" color="light"
+        mode="md">
+        <ion-icon color="primary" name="chevron-back">
+        </ion-icon>
+      </ion-button>
+    </div>
+    <ion-title color="medidor">
+      Informações Gerais
+    </ion-title>
+  </div>
+  <ion-list>
+    <ion-button routerLink="/fatura" mode="ios" color="light"
+      class="container-tipo">
+      <ion-label class="label-campo">
+        Conheça sua fatura
+      </ion-label>
+      <ion-icon color="primary" name="receipt"></ion-icon>
+    </ion-button>
+    <ion-button
+      (click)="irParaSite('https://pa.equatorialenergia.com.br/informacoes-gerais/telefones-enderecos-e-links-uteis/')"
+      mode="ios" color="light" class="container-tipo">
+      <ion-label class="label-campo">
+        Telefones, Endereços e links utéis
+      </ion-label>
+      <!-- <ion-icon color="primary" name="at"></ion-icon> -->
+    </ion-button>
+    <ion-button
+      (click)="irParaSite('https://pa.equatorialenergia.com.br/informacoes-gerais/bandeiras-tarifarias/')"
+      mode="ios" color="light" class="container-tipo">
+      <ion-label class="label-campo">
+        Entenda bandeiras-tarifarias
+      </ion-label>
+      <ion-icon color="primary" name="flag"></ion-icon>
+    </ion-button>
+    <ion-button
+      (click)="irParaSite('https://pa.equatorialenergia.com.br/informacoes-gerais/cobranca-de-icms/')"
+      mode="ios" color="light" class="container-tipo">
+      <ion-label class="label-campo">
+        Conheça seu icms
+      </ion-label>
+      <ion-icon color="primary" name="calculator"></ion-icon>
+    </ion-button>
+    <ion-button
+      (click)="irParaSite('https://pa.equatorialenergia.com.br/informacoes-gerais/transformacao-digital/')"
+      mode="ios" color="light" class="container-tipo">
+      <ion-label class="label-campo">
+        Como pagar com Pix
+      </ion-label>
+      <ion-icon color="primary" name="qr-code"></ion-icon>
+    </ion-button>
+    <!-- <ion-button mode="ios" color="light" class="container-tipo">
+      <ion-label class="label-campo">
+        Nossos Termos de uso
+      </ion-label>
+      <ion-icon color="primary" name="document"></ion-icon>
+    </ion-button> -->
+  </ion-list>
+
+    <ion-note class="note">
+      Versão do app 0.0.1
+    </ion-note>
+
+</ion-content>
+
+

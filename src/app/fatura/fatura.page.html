@@ -1,0 +1,329 @@
+<ion-content class="ion-padding">
+  <div class="header">
+    <div class="configuracoes">
+      <ion-button fill="clear" routerLink="/settings" routerDirection="back" color="light"
+        mode="md">
+        <ion-icon color="primary" name="chevron-back">
+        </ion-icon>
+      </ion-button>
+    </div>
+    <ion-title color="medidor">
+      Conheça sua fatura
+    </ion-title>
+  </div>
+
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-subtitle>
+        Atenção
+        <ion-icon name="alert-circle-outline"></ion-icon>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+        Apenas detalhamos a ordem e as informações conforme
+        o site oficial da equatorial onde apresenta a nova fatura para melhor
+        entendimento do modelo.
+        Caso queira acesso completo clique em acessar para ira para fonte
+        oficial
+      </ion-text>
+    </ion-card-content>
+    <ion-toolbar>
+      <ion-button
+      (click)="irParaSite()"
+        class="acessar" mode="md" slot="end" shape="round" fill="outline">
+        <ion-label color="primary">
+          Acessar site oficial
+        </ion-label>
+      </ion-button>
+    </ion-toolbar>
+  </ion-card>
+
+  <ion-list-header>
+    <ion-label>
+      <strong>
+        Informações da fatura
+      </strong>
+      <br />
+      (ordem do inicio ate ultimo item na fatura)
+    </ion-label>
+  </ion-list-header>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-dead" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          01
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações da instalção
+      <p>
+        classificações nome da companhia etc
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-dead" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          02
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Dados cliente
+      <p>
+        informações de contrato do cliente
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-dead" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          03
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Dados Fiscais
+      <p>
+        Futuramente será impresso o QRCODE referente
+        a nota fiscal
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-dead" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          04
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Campos de mensagens para os clientes
+      <p>
+        Avisos ou outras informaações
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          05
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Dados das datas de leitura do medidor
+      <p>
+        Leitura atual, anterior etc.
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          06
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Quadro demonstrativo da fatura
+      <p>
+        Informações valores, quantidade e etc.
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          07
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Histórico de Consumo
+      <p>
+        Consumo de meses anteriores
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          08
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações de tributos
+      <p>
+        Para saber icms e outros tributos
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          09
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informação fiscal
+      <p>
+        Dados dos tributos
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          10
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações da leitura do medidor
+      <p>
+        Dados coletados do medidor da residencia
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-half" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          11
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações de fator de potência/perda no ramal/resolução
+      ANEEL
+      <p>
+        Consumo e dados conforme legislação ANEEL
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-full" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          12
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações de data de apresentação
+      n° do programa social
+      <p>
+        Para moradores de baixa renda
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-full" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          13
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Reaviso de Vencimento
+      <p>
+        Se encontra-se com vencimento proximo
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-full" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          14
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações para o cliente
+      <p>
+        Selos de tarifa ou de outra informação
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-full" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          15
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Informações de composição do consumo
+      <p>
+        Leituras, quantidade ddo medidor, periodos etc
+      </p>
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-full" color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          16
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      QrCode
+      <p>
+        QRCODE de PIX para pagamento nos casos em que ele não apareça
+        terá uma mensagem solicitando que você atualize o seu cadastro
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="none" detail="false" mode="ios">
+    <div slot="start" class="container-numero">
+      <ion-icon size="large" class="rotate" name="battery-charging"
+        color="primary"></ion-icon>
+      <ion-label color="primary">
+        <strong>
+          17
+        </strong>
+      </ion-label>
+    </div>
+    <ion-label color="primary" class="ion-text-wrap">
+      Boleto para pagamento da fatura
+      <p>
+        Codigo de barras e codigo acima para pagamento
+      </p>
+    </ion-label>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "Medidor Diário",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

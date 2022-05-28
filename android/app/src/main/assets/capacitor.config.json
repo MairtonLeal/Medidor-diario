@@ -1,0 +1,6 @@
+{
+	"appId": "br.com.medidordiario",
+	"appName": "Medidor Diário",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
