@@ -18,9 +18,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
         // Admob options config
     const admobOptions: AdmobOptions = {
-      bannerAdId: 'ca-app-pub-6487111859071268/8419781382',
-      // ca-app-pub-6487111859071268/8419781382
-      isTesting: false,
+      isTesting: true,
       autoShowBanner: true,
       adSize: this.admob.AD_SIZE.BANNER,
     };
